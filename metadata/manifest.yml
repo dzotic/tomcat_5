@@ -1,6 +1,6 @@
 Name: tomcat8
-Cartridge-Short-Name: TOMCAT8
-Display-Name: TOMCAT8
+Cartridge-Short-Name: TOMCAT5
+Display-Name: TOMCAT5
 Description: "Jelastic Tomcat5.5"
 Version: '5.5.36'
 License: 'Apache licence'
