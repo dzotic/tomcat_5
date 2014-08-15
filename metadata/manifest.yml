@@ -11,7 +11,7 @@ Cartridge-Vendor: Jelastic
 Categories:
   - service
   - embedded
-Source-Url: https://github.com/SiryjVyiko/cartridge.git
+Source-Url: https://github.com/SiryjVyiko/tomcat.git
 Website: http://jelastic.com/
 Help-Topics:
   "Developer Center": https://jelastic.com
@@ -34,8 +34,8 @@ Cart-Data:
 Provides:
   - tomcat-5-5
 Scaling:
-  Min: 1
-  Max: 1
+  Min: 3
+  Max: 6
 Endpoints:
   - Private-IP-Name:   APP_HOST
     Private-Port-Name: APP_PORT
