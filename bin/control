@@ -49,7 +49,7 @@ if [ -x /opt/repo/versions/5.5.36/bin/variablesparser.sh ]; then
     . /opt/repo/versions/5.5.36/bin/variablesparser.sh
 fi
 
-APP_ENV="/opt/repo/versions/8.0.9/conf/tomcat-env.sh"
+APP_ENV="/opt/repo/versions/5.5.36/conf/tomcat-env.sh"
 
 # Source the app config file, if it exists.
 [ -r "$APP_ENV" ] && . "${APP_ENV}"
