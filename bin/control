@@ -159,6 +159,7 @@ setOpts(){
 
 
 start() {
+    return 0;
     setOpts;
     [ -r "$APP_ENV" ] && . "${APP_ENV}";
     if [[ "$HA" == "on"  ]]; then
