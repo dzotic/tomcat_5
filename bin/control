@@ -200,7 +200,6 @@ start() {
             fi
             return 1
         fi
-      return 0;
         # Start Tomcat, running as the $TOMCAT_USER.
         if [ "$USER" == "$TOMCAT_USER" ]; then
             # We're already the $TOMCAT_USER so just exec the script. JAVA_OPTS=$JAVA_OPTS$confresult ;
