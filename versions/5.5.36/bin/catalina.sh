@@ -333,6 +333,9 @@ elif [ "$1" = "stop" ] ; then
     -Dcatalina.home="$CATALINA_HOME" \
     -Djava.io.tmpdir="$CATALINA_TMPDIR" \
     org.apache.catalina.startup.Bootstrap "$@" stop
+    
+    killall -9 java >/dev/null 2>&1
+    KILL_SLEEP_INTERVAL=5
 
   if [ $FORCE -eq 1 ]; then
     if [ ! -z "$CATALINA_PID" ]; then
