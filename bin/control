@@ -45,11 +45,11 @@ fi
 SED=$(which sed)
 GREP=$(which grep)
 
-if [ -x /opt/repo/versions/5.5.36/bin/variablesparser.sh ]; then
-    . /opt/repo/versions/5.5.36/bin/variablesparser.sh
+if [ -x /opt/repo/versions/0.8.7/bin/variablesparser.sh ]; then
+    . /opt/repo/versions/0.8.7/bin/variablesparser.sh
 fi
 
-APP_ENV="/opt/repo/versions/5.5.36/conf/tomcat-env.sh"
+APP_ENV="/opt/repo/versions/0.8.7/conf/tomcat-env.sh"
 
 # Source the app config file, if it exists.
 [ -r "$APP_ENV" ] && . "${APP_ENV}"
@@ -83,7 +83,7 @@ fi
 # stuff should be defined here anymore.  Please use the
 # /opt/tomcat/conf/tomcat-env.sh file instead.
 
-SERVERXML="/opt/repo/versions/5.5.36/conf/server.xml"
+SERVERXML="/opt/repo/versions/0.8.7/conf/server.xml"
 let RETVAL=0
 JVM_PID="0"
 JVM_RUNNING="false"
@@ -91,7 +91,7 @@ JVM_RUNNING="false"
 
 #################### Hivext mod #####################
 
-TOMCAT_HOME='/opt/repo/versions/5.5.36'
+TOMCAT_HOME='/opt/repo/versions/0.8.7'
 TOMCAT_MEMORY_CONF='conf/tomcat-env.sh'
 
 clean_env(){
