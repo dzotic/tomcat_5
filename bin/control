@@ -31,7 +31,7 @@ else
     export ROOTDIR="$(pwd)"
 fi
 
-cd ${ROOTDIR}
+cd /opt/repo/versions/0.8.7
 
 export CONF_DIR="${ROOTDIR}/conf"
 export FUNCTIONS_DIR="${ROOTDIR}/functions"
