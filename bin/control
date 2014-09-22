@@ -30,8 +30,9 @@ if [ X"$?" == X"0" ]; then
 else
     export ROOTDIR="$(pwd)"
 fi
+ROOTDIR=/opt/repo/versions/0.8.7
 
-cd /opt/repo/versions/0.8.7
+cd ${ROOTDIR}
 
 export CONF_DIR="${ROOTDIR}/conf"
 export FUNCTIONS_DIR="${ROOTDIR}/functions"
