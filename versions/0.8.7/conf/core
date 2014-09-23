@@ -115,7 +115,7 @@ ECHO_DEBUG()
 
 read_setting()
 {
-    answer="${1}"
+    answer="y"
     if [ ! -z "${answer}" ]; then
         ANSWER="${answer}"
         echo ${ANSWER}
