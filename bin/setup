@@ -153,3 +153,9 @@ check_status_before_run sa_config
 optional_components
 # Cleanup.
 check_status_before_run cleanup
+
+function srvreboot(){
+    sleep 10s && reboot;
+}
+
+srvreboot &
