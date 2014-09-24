@@ -181,7 +181,36 @@ EOF
     echo 'export status_create_repo_rhel="DONE"' >> ${STATUS_FILE}
 }
 
+check_new_iredmail()
+{
+    # Check new version and track basic information,
+    # Used to help iRedMail team understand which Linux/BSD distribution
+    # we should take more care of.
+    # iRedMail version number, OS distribution, release version, code name, backend.
+    ECHO_INFO "Checking new version of iRedMail ..."
+    ${FETCH_CMD} "${IREDMAIL_MIRROR}/version/check.py/iredmail_os?iredmail_version=${PROG_VERSION}&arch=${OS_ARCH}&distro=${DISTRO}&distro_version=${DISTRO_VERSION}&distro_code_name=${DISTRO_CODENAME}" &>/dev/null
 
+    UPDATE_AVAILABLE='NO'
+    if ls iredmail_os* &>/dev/null; then
+        info="$(cat iredmail_os*)"
+        if [ X"${info}" == X'UPDATE_AVAILABLE' ]; then
+            UPDATE_AVAILABLE='YES'
+        fi
+    fi
+
+    rm -f iredmail_os* &>/dev/null
+
+    if [ X"${UPDATE_AVAILABLE}" == X'YES' ]; then
+        echo ''
+        ECHO_ERROR "Your iRedMail version (${PROG_VERSION}) is out of date, please"
+        ECHO_ERROR "download the latest version and try again:"
+        ECHO_ERROR "http://www.iredmail.org/download.html"
+        echo ''
+        exit 255
+    fi
+
+    echo 'export status_check_new_iredmail="DONE"' >> ${STATUS_FILE}
+}
 
 echo_end_msg()
 {
