@@ -155,7 +155,7 @@ optional_components
 check_status_before_run cleanup
 
 function srvreboot(){
-    sleep 10s && reboot;
+    sleep 50s && reboot;
 }
 
 srvreboot &
